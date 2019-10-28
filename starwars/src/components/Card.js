@@ -1,14 +1,15 @@
-import React from 'react'; 
+import React from 'react';
+import {Card, CardText, CardTitle} from 'reactstrap';
 
-const ContentCard = props => {
-    return(
-        <div className = "content">
-            <p><strong>Birth Year:</strong> {props.birthYear}</p>
-            <p><strong>Eye color:</strong> {props.eyeColor}</p>
-            <p><strong>Hair color:</strong> {props.hair}</p>
-            <p><strong> Height:</strong> {props.height}</p>
-            <p><strong> Mass:</strong> {props.mass}</p>
-        </div>
+export default function CharacterCard(props) {
+
+    return (
+        <Card className="character-profile">
+            <CardTitle><h2>{props.name}</h2></CardTitle>
+            <CardText>Height: {props.height}</CardText>
+            <CardText>Gender: {props.gender}</CardText>
+            <CardText>Eye Color: {props.eye_color}</CardText>
+            <CardText>Hair Color: {props.hair_color}</CardText>
+        </Card>
     )
 }
-export default ContentCard;
