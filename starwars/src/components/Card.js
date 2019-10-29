@@ -1,15 +1,15 @@
 import React from 'react';
-import {Card, CardText, CardTitle} from 'reactstrap';
+import Character from './Character';
+import './Card.css';
 
-export default function CharacterCard(props) {
-
-    return (
-        <Card className="character-profile">
-            <CardTitle><h2>{props.name}</h2></CardTitle>
-            <CardText>Height: {props.height}</CardText>
-            <CardText>Gender: {props.gender}</CardText>
-            <CardText>Eye Color: {props.eye_color}</CardText>
-            <CardText>Hair Color: {props.hair_color}</CardText>
-        </Card>
-    )
+const Card = props => {
+  return (
+    <div className="char-list">
+      {props.characters.map(char => {
+        return (<Character key={char.created} character={char}/>);
+      })}
+    </div>
+  );
 }
+
+export default Card;
