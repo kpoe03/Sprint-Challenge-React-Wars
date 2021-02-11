@@ -1,0 +1,8 @@
+.char-list {
+    display: flex;
+    box-sizing: border-box;
+    width: 1200px;
+    height:1500px;
+    flex-wrap: wrap;
+    margin-left: 800px;
+}
